@@ -17,6 +17,8 @@
 		39C8A6DE29AE406F000A873C /* psatestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C8A6DD29AE406F000A873C /* psatestTests.swift */; };
 		39C8A6E829AE406F000A873C /* psatestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C8A6E729AE406F000A873C /* psatestUITests.swift */; };
 		39C8A6EA29AE406F000A873C /* psatestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C8A6E929AE406F000A873C /* psatestUITestsLaunchTests.swift */; };
+		39C8A74C29AE4EA1000A873C /* OpenWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C8A74929AE4E96000A873C /* OpenWeather.framework */; };
+		39C8A74D29AE4EA1000A873C /* OpenWeather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39C8A74929AE4E96000A873C /* OpenWeather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,35 @@
 			remoteGlobalIDString = 39C8A6BF29AE406D000A873C;
 			remoteInfo = psatest;
 		};
+		39C8A74829AE4E96000A873C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39C8A74329AE4E96000A873C /* OpenWeather.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 39C8A70029AE40EB000A873C;
+			remoteInfo = OpenWeather;
+		};
+		39C8A74A29AE4E96000A873C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39C8A74329AE4E96000A873C /* OpenWeather.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 39C8A70A29AE40EB000A873C;
+			remoteInfo = OpenWeatherTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		39C8A73D29AE4B81000A873C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				39C8A74D29AE4EA1000A873C /* OpenWeather.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		39C8A6C029AE406D000A873C /* psatest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = psatest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +81,7 @@
 		39C8A6E329AE406F000A873C /* psatestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = psatestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39C8A6E729AE406F000A873C /* psatestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psatestUITests.swift; sourceTree = "<group>"; };
 		39C8A6E929AE406F000A873C /* psatestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psatestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		39C8A74329AE4E96000A873C /* OpenWeather.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenWeather.xcodeproj; path = ../../../../OpenWeather/OpenWeather.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C8A74C29AE4EA1000A873C /* OpenWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +117,7 @@
 				39C8A6DC29AE406F000A873C /* psatestTests */,
 				39C8A6E629AE406F000A873C /* psatestUITests */,
 				39C8A6C129AE406D000A873C /* Products */,
+				39C8A73A29AE4B80000A873C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +142,7 @@
 				39C8A6D129AE406F000A873C /* LaunchScreen.storyboard */,
 				39C8A6D429AE406F000A873C /* Info.plist */,
 				39C8A6CC29AE406D000A873C /* psatest.xcdatamodeld */,
+				39C8A74029AE4E43000A873C /* Modules */,
 			);
 			path = psatest;
 			sourceTree = "<group>";
@@ -130,6 +164,38 @@
 			path = psatestUITests;
 			sourceTree = "<group>";
 		};
+		39C8A73029AE4B1E000A873C /* OpenWeather */ = {
+			isa = PBXGroup;
+			children = (
+				39C8A74329AE4E96000A873C /* OpenWeather.xcodeproj */,
+			);
+			path = OpenWeather;
+			sourceTree = "<group>";
+		};
+		39C8A73A29AE4B80000A873C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39C8A74029AE4E43000A873C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				39C8A73029AE4B1E000A873C /* OpenWeather */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		39C8A74429AE4E96000A873C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39C8A74929AE4E96000A873C /* OpenWeather.framework */,
+				39C8A74B29AE4E96000A873C /* OpenWeatherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +206,7 @@
 				39C8A6BC29AE406D000A873C /* Sources */,
 				39C8A6BD29AE406D000A873C /* Frameworks */,
 				39C8A6BE29AE406D000A873C /* Resources */,
+				39C8A73D29AE4B81000A873C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +287,12 @@
 			mainGroup = 39C8A6B729AE406D000A873C;
 			productRefGroup = 39C8A6C129AE406D000A873C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 39C8A74429AE4E96000A873C /* Products */;
+					ProjectRef = 39C8A74329AE4E96000A873C /* OpenWeather.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				39C8A6BF29AE406D000A873C /* psatest */,
@@ -228,6 +301,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		39C8A74929AE4E96000A873C /* OpenWeather.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OpenWeather.framework;
+			remoteRef = 39C8A74829AE4E96000A873C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		39C8A74B29AE4E96000A873C /* OpenWeatherTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OpenWeatherTests.xctest;
+			remoteRef = 39C8A74A29AE4E96000A873C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		39C8A6BE29AE406D000A873C /* Resources */ = {

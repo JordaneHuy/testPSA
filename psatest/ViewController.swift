@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import OpenWeather
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let popo: Location = Location(name: "popo")
+        popo.test()
     }
 
 
