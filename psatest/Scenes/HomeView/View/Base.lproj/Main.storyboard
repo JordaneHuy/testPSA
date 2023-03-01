@@ -45,11 +45,22 @@
                     <connections>
                         <outlet property="addCityButton" destination="tRw-xh-qHf" id="N5L-yO-yRT"/>
                         <outlet property="citiesTableView" destination="BaX-Ha-lom" id="5RT-41-sAb"/>
+                        <segue destination="nMt-gO-PZ3" kind="show" identifier="segueCityDetail" id="AY4-53-Sfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="979.38931297709917" y="-2.1126760563380285"/>
+        </scene>
+        <!--CityDetailStoryboard-->
+        <scene sceneID="WlX-hN-LOX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CityDetailStoryboard" id="nMt-gO-PZ3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jgU-R6-OjI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0G-EE-uRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1582" y="115"/>
         </scene>
         <!--AddCityStoryboard-->
         <scene sceneID="9j4-Ry-Zc1">
@@ -59,7 +70,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cq0-td-Ys2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="-2"/>
+            <point key="canvasLocation" x="1570" y="-96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UUy-Z0-gK4">
