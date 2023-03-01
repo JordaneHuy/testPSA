@@ -36,30 +36,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="ZQI-W8-2y1">
-                    <connections>
-                        <outlet property="delegate" destination="Y6W-OH-hqX" id="pv7-jw-zgd"/>
-                        <outlet property="searchContentsController" destination="Y6W-OH-hqX" id="R2L-UI-3FR"/>
-                        <outlet property="searchResultsDataSource" destination="Y6W-OH-hqX" id="gnQ-vm-Y6w"/>
-                        <outlet property="searchResultsDelegate" destination="Y6W-OH-hqX" id="UFb-sZ-cDL"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="TGx-YI-F61">
-                    <connections>
-                        <outlet property="delegate" destination="Y6W-OH-hqX" id="eGn-Bw-2l6"/>
-                        <outlet property="searchContentsController" destination="Y6W-OH-hqX" id="mWN-Rq-4Vp"/>
-                        <outlet property="searchResultsDataSource" destination="Y6W-OH-hqX" id="IDk-mB-ZmM"/>
-                        <outlet property="searchResultsDelegate" destination="Y6W-OH-hqX" id="snk-56-DLa"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="EGE-sf-gKq">
-                    <connections>
-                        <outlet property="delegate" destination="Y6W-OH-hqX" id="Iis-JV-4SE"/>
-                        <outlet property="searchContentsController" destination="Y6W-OH-hqX" id="lTv-tI-o34"/>
-                        <outlet property="searchResultsDataSource" destination="Y6W-OH-hqX" id="dDd-y7-4mV"/>
-                        <outlet property="searchResultsDelegate" destination="Y6W-OH-hqX" id="qOF-is-e8D"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="53" y="-2"/>
         </scene>

@@ -42,7 +42,6 @@ class CityDetailViewController: UIViewController {
                     self.maxMinLabel.text = "Max: \(main.tempMax)° - Min: \(main.tempMin)°"
                     self.weatherImage.image = UIImage(named: weather.icon)
                 }
-                
             }
         }
     }
