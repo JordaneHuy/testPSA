@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var citiesTableView: UITableView!
     
     var viewModel: HomeViewModel = HomeViewModel()
+    var selectedLocation: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class HomeViewController: UIViewController {
        if segue.identifier == "segueToAddCity" {
           let controller = segue.destination as! AddCityViewController
           controller.delegate = self
+       } else if segue.identifier == "segueCityDetail" {
+           let controller = segue.destination as! CityDetailViewController
+           controller.location = selectedLocation
        }
     }
     
@@ -59,6 +63,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedLocation = viewModel.userLocations[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "segueCityDetail", sender: cell)

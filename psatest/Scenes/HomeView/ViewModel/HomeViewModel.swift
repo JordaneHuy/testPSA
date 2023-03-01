@@ -8,7 +8,7 @@
 import Foundation
 import OpenWeather
 
-struct HomeViewModel {
+class HomeViewModel {
     private(set) var userLocations : [Location] = [] {
         didSet {
             self.bindLocations()
@@ -19,7 +19,7 @@ struct HomeViewModel {
     
     var bindLocations : (() -> ()) = {}
     
-    mutating func updateLocations(location: Location) {
+    func updateLocations(location: Location) {
         userLocations.append(location)
     }
 }
