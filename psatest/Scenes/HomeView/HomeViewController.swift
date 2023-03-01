@@ -13,11 +13,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkService.requestCity()
-        // Do any additional setup after loading the view.
-        
-        //let popo: Location = Location(name: "popo")
-        //popo.test()
     }
 
 

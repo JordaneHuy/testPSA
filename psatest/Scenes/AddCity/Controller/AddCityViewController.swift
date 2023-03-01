@@ -8,23 +8,29 @@
 import UIKit
 
 class AddCityViewController: UIViewController {
-
+    @IBOutlet weak var searchLocationTextField: UITextField!
+    
+    var viewModel: AddCityViewModel = AddCityViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .red
+        
+        searchLocationTextField.delegate = self
+        searchLocationTextField.addTarget(self, action: #selector(doSearchLocation), for: .editingDidEnd)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func doSearchLocation() {
+        guard let searchValue = searchLocationTextField.text, !searchValue.isEmpty else {
+            return
+        }
+        
+        viewModel.searchLocation(searchStr: searchValue)
     }
-    */
+}
 
+extension AddCityViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+         textField.resignFirstResponder()
+         return true
+    }
 }
