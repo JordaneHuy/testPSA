@@ -211,10 +211,9 @@
 		39C8A74F29AE5563000A873C /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				39C8A75229AE55B4000A873C /* View */,
-				39C8A75129AE55AD000A873C /* ViewModel */,
 				39C8A75029AE55A7000A873C /* Controller */,
-				39C8A6C729AE406D000A873C /* HomeViewController.swift */,
+				39C8A75129AE55AD000A873C /* ViewModel */,
+				39C8A75229AE55B4000A873C /* View */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -222,6 +221,7 @@
 		39C8A75029AE55A7000A873C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				39C8A6C729AE406D000A873C /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,8 +270,8 @@
 		39C8A75629AE562E000A873C /* AddCity */ = {
 			isa = PBXGroup;
 			children = (
-				39C8A77029AE92D1000A873C /* ViewModel */,
 				39C8A75829AE5666000A873C /* Controller */,
+				39C8A77029AE92D1000A873C /* ViewModel */,
 				39C8A75729AE565F000A873C /* View */,
 			);
 			path = AddCity;

@@ -13,7 +13,7 @@ class AddCityViewModel {
     
     private let networkService: OpenWeatherQuery = OpenWeatherQuery()
 
-    func searchLocation(searchStr: String) {
+    func searchLocation(searchStr: String, completion: @escaping (Location) -> Void) {
         networkService.requestCity(location: searchStr) { [weak self] result in
             switch result {
             case.success(let location):
@@ -21,7 +21,7 @@ class AddCityViewModel {
                     print("Error - No city found")
                     return
                 }
-                
+                completion(location)
                 self?.userLocation = location
             case .failure(let error):
                 print(error.localizedDescription)

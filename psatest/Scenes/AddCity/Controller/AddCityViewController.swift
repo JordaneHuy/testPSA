@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import OpenWeather
+
+protocol AddCityViewControllerDelegate {
+    func didAddCity(city: Location)
+}
 
 class AddCityViewController: UIViewController {
     @IBOutlet weak var searchLocationTextField: UITextField!
     
     var viewModel: AddCityViewModel = AddCityViewModel()
+    var delegate: AddCityViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +30,9 @@ class AddCityViewController: UIViewController {
             return
         }
         
-        viewModel.searchLocation(searchStr: searchValue)
+        viewModel.searchLocation(searchStr: searchValue) { [weak self] location in
+            self?.delegate?.didAddCity(city: location)
+        }
     }
 }
 

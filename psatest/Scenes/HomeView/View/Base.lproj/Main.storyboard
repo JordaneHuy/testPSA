@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7sg-9R-AwL">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,20 +9,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="psatest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BaX-Ha-lom">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BaX-Ha-lom" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4BZ-xj-Z27"/>
+                            <constraint firstItem="BaX-Ha-lom" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9fv-ER-TkU"/>
+                            <constraint firstItem="BaX-Ha-lom" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Nen-c3-nwX"/>
+                            <constraint firstItem="BaX-Ha-lom" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dXB-gt-48x"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="vqu-zs-5HU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tRw-xh-qHf">
+                            <connections>
+                                <segue destination="M4Q-6Z-mhl" kind="presentation" identifier="segueToAddCity" id="s1C-7v-S5c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addCityButton" destination="tRw-xh-qHf" id="N5L-yO-yRT"/>
+                        <outlet property="citiesTableView" destination="BaX-Ha-lom" id="5RT-41-sAb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.671755725190835" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="979.38931297709917" y="-2.1126760563380285"/>
         </scene>
         <!--AddCityStoryboard-->
         <scene sceneID="9j4-Ry-Zc1">
@@ -32,7 +55,25 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cq0-td-Ys2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="-2"/>
+            <point key="canvasLocation" x="1752" y="-2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UUy-Z0-gK4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7sg-9R-AwL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nud-zH-rfu">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LMn-MF-IZT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4Y-Pw-Zcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
