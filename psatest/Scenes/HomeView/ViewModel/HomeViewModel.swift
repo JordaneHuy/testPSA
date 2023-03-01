@@ -8,9 +8,18 @@
 import Foundation
 import OpenWeather
 
-class HomeViewModel {
-    var userLocations: [Location] = []
+struct HomeViewModel {
+    private(set) var userLocations : [Location] = [] {
+        didSet {
+            self.bindLocations()
+        }
+    }
     
     private let networkService: OpenWeatherQuery = OpenWeatherQuery()
-
+    
+    var bindLocations : (() -> ()) = {}
+    
+    mutating func updateLocations(location: Location) {
+        userLocations.append(location)
+    }
 }

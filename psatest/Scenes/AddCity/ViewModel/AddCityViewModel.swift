@@ -9,12 +9,10 @@ import Foundation
 import OpenWeather
 
 class AddCityViewModel {
-    var userLocation: Location?
-    
     private let networkService: OpenWeatherQuery = OpenWeatherQuery()
 
     func searchLocation(searchStr: String, completion: @escaping (Location) -> Void) {
-        networkService.requestCity(location: searchStr) { [weak self] result in
+        networkService.requestCity(location: searchStr) { result in
             switch result {
             case.success(let location):
                 guard let location = location.first else {
@@ -22,7 +20,6 @@ class AddCityViewModel {
                     return
                 }
                 completion(location)
-                self?.userLocation = location
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -21,6 +21,7 @@ class AddCityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchLocationTextField.becomeFirstResponder()
         searchLocationTextField.delegate = self
         searchLocationTextField.addTarget(self, action: #selector(doSearchLocation), for: .editingDidEnd)
     }
@@ -32,6 +33,10 @@ class AddCityViewController: UIViewController {
         
         viewModel.searchLocation(searchStr: searchValue) { [weak self] location in
             self?.delegate?.didAddCity(city: location)
+            
+            DispatchQueue.main.async {
+                self?.dismiss(animated: true)
+            }
         }
     }
 }
