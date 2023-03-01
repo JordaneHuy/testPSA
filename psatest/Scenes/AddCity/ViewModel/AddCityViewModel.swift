@@ -9,8 +9,10 @@ import Foundation
 import OpenWeather
 
 class AddCityViewModel {
+    // MARK: - Attributes
     private let networkService: OpenWeatherQuery = OpenWeatherQuery()
-
+    
+    // MARK: - Methods
     func searchLocation(searchStr: String, completion: @escaping (Location) -> Void) {
         networkService.requestCity(location: searchStr) { result in
             switch result {

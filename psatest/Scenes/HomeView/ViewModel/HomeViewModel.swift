@@ -9,6 +9,7 @@ import Foundation
 import OpenWeather
 
 class HomeViewModel {
+    // MARK: - Attributes
     private(set) var userLocations : [Location] = [] {
         didSet {
             self.bindLocations()
@@ -17,8 +18,10 @@ class HomeViewModel {
     
     private let networkService: OpenWeatherQuery = OpenWeatherQuery()
     
+    // MARK: - Binding closure
     var bindLocations : (() -> ()) = {}
     
+    // MARK: - Methods
     func updateLocations(location: Location) {
         userLocations.append(location)
     }

@@ -9,14 +9,17 @@ import UIKit
 import OpenWeather
 
 class CityDetailViewController: UIViewController {
+    // MARK: - IBOutlet
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var maxMinLabel: UILabel!
     
+    // MARK: - Attributes
     var viewModel: CityDetailViewModel = CityDetailViewModel()
     var location: Location?
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +27,7 @@ class CityDetailViewController: UIViewController {
         bindView()
     }
     
+    // MARK: - Methods
     func setupViewModel() {
         viewModel.location = location
     }

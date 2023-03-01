@@ -9,6 +9,7 @@ import Foundation
 import OpenWeather
 
 class CityDetailViewModel {
+    // MARK: - Attributes
     var location: Location? {
         didSet {
             guard let location = location else { return }
@@ -22,10 +23,12 @@ class CityDetailViewModel {
         }
     }
     
+    // MARK: - Binding closure
     var bindLocationDetail : (() -> ()) = {}
     
     private let networkService: OpenWeatherQuery = OpenWeatherQuery()
     
+    // MARK: - Methods
     func requestCityDetail(location: Location) {
         networkService.requestCityDetail(location: location) { result in
             switch result {

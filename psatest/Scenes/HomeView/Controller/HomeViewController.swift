@@ -9,12 +9,15 @@ import UIKit
 import OpenWeather
 
 class HomeViewController: UIViewController {
+    // MARK: - IBOutlet
     @IBOutlet weak var addCityButton: UIBarButtonItem!
     @IBOutlet weak var citiesTableView: UITableView!
     
+    // MARK: - Attributes
     var viewModel: HomeViewModel = HomeViewModel()
     var selectedLocation: Location?
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +35,7 @@ class HomeViewController: UIViewController {
        }
     }
     
+    // MARK: - Methods
     func bindView() {
         self.viewModel.bindLocations = {
             DispatchQueue.main.async {
@@ -45,6 +49,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - Delegate
 extension HomeViewController: AddCityViewControllerDelegate {
     func didAddCity(city: Location) {
         viewModel.updateLocations(location: city)

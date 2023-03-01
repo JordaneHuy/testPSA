@@ -13,11 +13,15 @@ protocol AddCityViewControllerDelegate {
 }
 
 class AddCityViewController: UIViewController {
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var searchLocationTextField: UITextField!
     
+    // MARK: - Attributes
     var viewModel: AddCityViewModel = AddCityViewModel()
     var delegate: AddCityViewControllerDelegate?
     
+    // MARK: - LifeCyle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +30,7 @@ class AddCityViewController: UIViewController {
         searchLocationTextField.addTarget(self, action: #selector(doSearchLocation), for: .editingDidEnd)
     }
     
+    // MARK: - Action
     @objc func doSearchLocation() {
         guard let searchValue = searchLocationTextField.text, !searchValue.isEmpty else {
             return
@@ -41,6 +46,7 @@ class AddCityViewController: UIViewController {
     }
 }
 
+// MARK: - Delegate
 extension AddCityViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
          textField.resignFirstResponder()
